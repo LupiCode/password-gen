@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Greeting text with animation -->
+        <h1 id="greeting" class="typing-animation"></h1>
+
+        <!-- "Need a password?" and "I got you!" -->
+        <p id="message"></p>
+        
+        <!-- Input field with placeholder text -->
+        <div class="input-container">
+            <input type="number" id="length" min="8" max="50" placeholder="Enter password length" required>
+        </div>
+
+        <!-- Button -->
+        <button id="generate-btn">Generate Password</button>
+        
+        <!-- Message displayed after password generation -->
+        <p id="generated-message" style="display:none;">Here's your new password:</p>
+
+        <!-- Displaying the generated password -->
+        <div id="password-output">
+            <p id="generated-password"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

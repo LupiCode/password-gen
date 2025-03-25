@@ -1,0 +1,110 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #e0f7fa; /* Light blue color */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* More shadow for a floating effect */
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+h1.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2s steps(30) forwards;
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+#message {
+    opacity: 0;
+    animation: fadeInMessage 1s ease-in 2s forwards, wink 2s ease-in 3s forwards; /* Extended wink animation */
+}
+
+@keyframes fadeInMessage {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes wink {
+    0% {
+        content: "Need a strong password?";
+    }
+    50% {
+        content: "I got you 😉";
+    }
+    100% {
+        content: "I got you 😉";
+    }
+}
+
+.input-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Input box styling */
+input {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 200px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    color: #333; /* Text color for the input box */
+}
+
+/* Placeholder text styling */
+input::placeholder {
+    color: #aaa; /* Lighter color for the placeholder */
+    text-align: center; /* Align placeholder text to the center */
+    opacity: 1; /* Ensure placeholder is fully visible */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#password-output {
+    margin-top: 20px;
+    display: none;  /* Hide until password is generated */
+    text-align: center;
+}
+
+#generated-message {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
